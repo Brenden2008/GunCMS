@@ -13,7 +13,7 @@ if (
   (realpage == '' && cmspage == null) ||
   (realpage == 'index.html' && cmspage == null)
 ) {
-  GunCMS.render(0, function(title, navbar, body, footer, header, scripts) {
+  GunCMS.render(0, function(title, navbar, body, footer, header) {
     // Render Navbar
     html = $.parseHTML(navbar);
     $('#navbar-right').append(html);
