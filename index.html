@@ -1,16 +1,61 @@
+<!-- Default theme -->
+<!DOCTYPE html>
 <html>
 
 <head>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous"></script>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item">
+
+      </a>
+
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start" id='navbar-right'>
+
+        </div>
+      </div>
+  </nav>
   <script>
-    $(function(){
-    $("#body").load("/cms/themes/default/body.html");
-    $.getJSON("/cms/plugins/scripts.json")
-  });
+    $(document).ready(function() {
+
+      // Check for click events on the navbar burger icon
+      $(".navbar-burger").click(function() {
+
+          // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+          $(".navbar-burger").toggleClass("is-active");
+          $(".navbar-menu").toggleClass("is-active");
+
+      });
+    });
   </script>
 </head>
 
-<body id="body">
+<body>
+  <section class="section">
+    <div class="container" id='content'>
+
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p id='footer'>
+
+      </p>
+    </div>
+  </footer>
 </body>
 
 </html>
