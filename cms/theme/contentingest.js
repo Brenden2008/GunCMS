@@ -25,5 +25,13 @@ if (
     // Render Body
     html = $.parseHTML(body);
     $('#content').append(html);
+
+    // Render Footer
+    html = $.parseHTML(footer);
+    $('#footer').append(html);
+
+    // Render Header
+    html = $.parseHTML(header);
+    $('#head').append(html);
   });
 }
